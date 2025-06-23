@@ -13,6 +13,7 @@ public class PlayerInventory : MonoBehaviour
     public int Coins => coins;
     public int Potions => potions;
 
+    // Se usó de esta manera pero puede ser reemplazodo por un lista para añadir objetos de manera más escalable, con cada objeto teniendo un nombre y cantidad del mismo, dentro de cierta cantidad de slots del inventario
     private void Awake()
     {
         if (Instance == null)
