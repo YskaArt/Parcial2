@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
-    private bool facingRight = true;
+    
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        // Actualizar animaciones
+       
         bool isRunning = movement != Vector2.zero;
         animator.SetBool("IsRunning", isRunning);
 
@@ -35,12 +35,12 @@ public class PlayerController : MonoBehaviour
         if (movement.x < 0)
         {
             spriteRenderer.flipX = true;
-            facingRight = false;
+            
         }
         else if (movement.x > 0)
         {
             spriteRenderer.flipX = false;
-            facingRight = true;
+           
         }
 
         // Interacción
